@@ -147,6 +147,13 @@ To simulate credential theft, I used a tool called `procdump` to dump the `lsass
 
 ####  Detecting Malicious Activities
 Using LimaCharlie’s EDR, I analyzed the telemetry data generated from the credential dumping activity. This involved identifying key indicators of compromise (IoCs) and creating detection rules to alert on such activities.
+
+![Console](Screenshots/Screenshot_2025_6.png)
+Sensitive Process
+
+![Console](Screenshots/Detections.png)
+
+
  
   
   ![Console](Screenshots/Console.png)
@@ -175,7 +182,7 @@ Using LimaCharlie’s EDR, I analyzed the telemetry data generated from the cred
   
   
   ![Console](Screenshots/Screenshot_2025_5.png)
-  ![Console](Screenshots/Screenshot_2025_6.png)
+  
   ![Console](Screenshots/Screenshot_2025_7.png) 
   
   
