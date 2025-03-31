@@ -65,6 +65,8 @@ LimaCharlie is a powerful “SecOps Cloud Platform”. It not only comes with a 
 - I configure LimaCharlie to also ship the Sysmon event logs alongside its own EDR telemetry
 - LimaCharlie will now start shipping Sysmon logs which provide a wealth of EDR-like telemetry, some of which is redundant to LC’s own telemetry, but Sysmon is still a very power visibility tool that runs well alongside any EDR agent.
 
+  
+
 - Another reason i am ingesting Sysmon logs is that the built-in Sigma rules we are about to enable largely depend on Sysmon logs as that is what most of them were written for.
 
 ##  Enable Sigma EDR Ruleset
@@ -106,4 +108,29 @@ LimaCharlie is a powerful “SecOps Cloud Platform”. It not only comes with a 
 
 
   ![Console](Screenshots/Console.png)
-
+  ![Console](Screenshots/Detecting_vss.png)
+  ![Console](Screenshots/Detections.png)
+  ![Console](Screenshots/shell.png)
+  ![Console](Screenshots/Sigma_Ruleset.png)
+  ![Console](Screenshots/Yara.single.png)
+  ![Console](Screenshots/File_System.png)
+  ![Console](Screenshots/Generate_C2_Implants.png)
+  ![Console](Screenshots/Getsystem.png)
+  ![Console](Screenshots/Hash.png)
+  ![Console](Screenshots/Implants.png)
+  ![Console](Screenshots/LSASS_Detection.png)
+  ![Console](Screenshots/LimaCharlie_add_Sensor.png)
+  ![Console](Screenshots/Network.png)
+  ![Console](Screenshots/Network_Connections.png)
+  ![Console](Screenshots/Process_Tree.png)
+  ![Console](Screenshots/Processes.png)
+  ![Console](Screenshots/Sigma_Ruleset.png)
+  ![Console](Screenshots/Sysmon_logs_Config.png)
+  ![Console](Screenshots/VSS_Deletion_rules.png)
+  ![Console](Screenshots/Virus_Total.png)
+  ![Console](Screenshots/Whomai.png)
+  ![Console](Screenshots/YARA_Detections2.png)
+  ![Console](Screenshots/YARA_Detection_Memory.png)
+  ![Console](Screenshots/sensor_endpoint.png)
+  
+  
