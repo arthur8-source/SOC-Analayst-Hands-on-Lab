@@ -88,6 +88,11 @@ To simulate real-world attacks, I set up a Command and Control (C2) server using
 
 ####  Executing the Payload
 I executed the generated payload on the Windows VM, which initiated a connection back to the C2 server. This setup allowed me to interact with the compromised system through the C2 framework, mimicking the actions of a real attacker.
+
+- One of the easiest ways to spot unusual processes is to simply look for ones that are NOT signed
+
+- My C2 implant shows as not signed, and is also active on the network.
+
    ![Console](Screenshots/Screenshot_2025_1.png)  
     Start Sliver
     
@@ -110,12 +115,9 @@ I executed the generated payload on the Windows VM, which initiated a connection
     Process Tree 2
 
 
-## Exploring EDR Telemetry
+### Exploring EDR Telemetry
 - Using the telemetry data from LimaCharlie’s EDR platform, I monitored the activities performed through the C2 connection. This included observing process trees, network connections, and other system behaviors that indicated a compromise.
- 
-- One of the easiest ways to spot unusual processes is to simply look for ones that are NOT signed
 
-- My C2 implant shows as not signed, and is also active on the network.
 
   ![Console](Screenshots/Processes_1.png)
    Processes
@@ -135,7 +137,17 @@ I executed the generated payload on the Windows VM, which initiated a connection
   
 
 - Simulating adversarial actions provided me with vital insights into attacker tactics, methods, and procedures (TTPs), allowing me to better recognize and respond to real-world threats.
-  
+
+# Part 3: Crafting and Detecting Attacks
+
+In the third part of the series, I concentrated on simulating and identifying various attack strategies in order to better understand threat detection.
+
+####  Credential Dumping
+To simulate credential theft, I used a tool called `procdump` to dump the `lsass.exe` process memory. This technique is commonly used by attackers to extract credentials from memory.
+
+####  Detecting Malicious Activities
+Using LimaCharlie’s EDR, I analyzed the telemetry data generated from the credential dumping activity. This involved identifying key indicators of compromise (IoCs) and creating detection rules to alert on such activities.
+ 
   
   ![Console](Screenshots/Console.png)
   ![Console](Screenshots/Detecting_vss.png)
