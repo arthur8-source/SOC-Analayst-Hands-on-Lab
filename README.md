@@ -126,7 +126,7 @@ I executed the generated payload on the Windows VM, which initiated a connection
   ![Console](Screenshots/Detections.png)
   ![Console](Screenshots/Shell_1.png)
   ![Console](Screenshots/Sigma_Ruleset.png)
-  ![Console](Screenshots/Yara_single.png)
+  ![Console](Screenshots/Yara_silver.png)
   ![Console](Screenshots/File_System.png)
   ![Console](Screenshots/Getsystem.png)
   ![Console](Screenshots/Hash_1.png)
