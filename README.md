@@ -131,7 +131,7 @@ I executed the generated payload on the Windows VM, which initiated a connection
   ![Console](Screenshots/Getsystem.png)
   ![Console](Screenshots/Hash_1.png)
   ![Console](Screenshots/Implants_1.png)
-  ![Console](Screenshots/LSASS_Detection.png)
+  ![Console](Screenshots/LSASS._Detection.png)
   ![Console](Screenshots/Network_1.png)
   ![Console](Screenshots/Network_connections.png)
   ![Console](Screenshots/Process_Tree.png)
@@ -142,5 +142,11 @@ I executed the generated payload on the Windows VM, which initiated a connection
   ![Console](Screenshots/YARA_Detections2.png)
   ![Console](Screenshots/YARA_Detection_Memory.png)
   ![Console](Screenshots/sensor_endpoint.png)
-  
+  ![Console](Screenshots/Screenshot_2025_1.png)
+  ![Console](Screenshots/Screenshot_2025_2.png)
+  ![Console](Screenshots/Screenshot_2025_3.png)
+  ![Console](Screenshots/Screenshot_2025_4.png)
+  ![Console](Screenshots/Screenshot_2025_5.png)
+  ![Console](Screenshots/Screenshot_2025_6.png)
+  ![Console](Screenshots/Screenshot_2025_7.png) 
   
