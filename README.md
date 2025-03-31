@@ -131,7 +131,7 @@ I executed the generated payload on the Windows VM, which initiated a connection
   ![Console](Screenshots/Getsystem.png)
   ![Console](Screenshots/Hash_1.png)
   ![Console](Screenshots/Implants_1.png)
-  ![Console](Screenshots/LSASS._Detection.png)
+  ![Console](Screenshots/LSASS_Detection.png)
   ![Console](Screenshots/Network_1.png)
   ![Console](Screenshots/Network_connections.png)
   ![Console](Screenshots/Process_Tree.png)
