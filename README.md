@@ -79,19 +79,21 @@ LimaCharlie is a powerful “SecOps Cloud Platform”. It not only comes with a 
 ![Console](Screenshots/Sigma_Ruleset.png)
   Sigma Ruleset
 
-## Start the Sliver Client
--  In your Linux terminal, enter a root shell
--  Verify the server is running
--  Launch the Sliver client
--  Start the HTTP listener
+# Part 2: Adversary Simulation
 
--  
--
--   ## Gnerate our C2 Implant
-- Generate C2 implant and drop it into a directory we'll later be able to access from the Windows VM.
+In the second part of the series, I focused on simulating adversarial activities to understand how attackers operate and how to detect their actions effectively.
+
+####  Command and Control (C2) Setup
+To simulate real-world attacks, I set up a Command and Control (C2) server using Sliver, an open-source C2 framework. This involved generating a payload and deploying it on the Windows VM to establish a communication channel between the attacker (C2 server) and the victim (Windows VM).
+
+####  Executing the Payload
+I executed the generated payload on the Windows VM, which initiated a connection back to the C2 server. This setup allowed me to interact with the compromised system through the C2 framework, mimicking the actions of a real attacker.
+
+   ![Console](Screenshots/Generate_C2_Implants.png)
 
 ## Drop our C2 implant on Windows and launch it
-
+- a web server on the Linux VM which is serving up the location we saved our C2 implant in the previous step.
+- Click on your implant name to download it to the Windows VM
 
 
 ## Open your new C2 Session
@@ -126,7 +128,7 @@ LimaCharlie is a powerful “SecOps Cloud Platform”. It not only comes with a 
   ![Console](Screenshots/Sigma_Ruleset.png)
   ![Console](Screenshots/Yara.single.png)
   ![Console](Screenshots/File_System.png)
-  ![Console](Screenshots/Generate_C2_Implants.png)
+ 
   ![Console](Screenshots/Getsystem.png)
   ![Console](Screenshots/Hash.png)
   ![Console](Screenshots/Implants.png)
