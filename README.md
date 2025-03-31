@@ -95,6 +95,7 @@ LimaCharlie is a powerful “SecOps Cloud Platform”. It not only comes with a 
 - Verify your session in Sliver, taking note of the Session ID
 -You are now interacting directly with the C2 session on the Windows VM. Let’s run a few basic commands to get our bearing on the victim host.
 
+
 ## Exploring EDR Telemetry
 - Let’s hop into the LimaCharlie web UI and check out some basic features.
 - Click your active Windows sensor 
@@ -102,5 +103,7 @@ LimaCharlie is a powerful “SecOps Cloud Platform”. It not only comes with a 
 - One of the easiest ways to spot unusual processes is to simply look for ones that are NOT signed
 
 - My C2 implant shows as not signed, and is also active on the network.
-  
+
+
+  ![Console](soc_analyst/Console.png)
 
