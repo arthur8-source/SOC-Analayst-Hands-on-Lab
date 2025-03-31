@@ -60,22 +60,34 @@ LimaCharlie is a powerful “SecOps Cloud Platform”. It not only comes with a 
 - Click Create
 
 - Select the Installation Key we just created
-
+- Add Sensor
+   ![Console](Screenshots/LimaCharlie_add_Sensor.png)
+   Add Sensor
+  
  ## Configure LimaCharlie to ingest Sysmon logs from our VM
 - I configure LimaCharlie to also ship the Sysmon event logs alongside its own EDR telemetry
 - LimaCharlie will now start shipping Sysmon logs which provide a wealth of EDR-like telemetry, some of which is redundant to LC’s own telemetry, but Sysmon is still a very power visibility tool that runs well alongside any EDR agent.
-
-  
-
 - Another reason i am ingesting Sysmon logs is that the built-in Sigma rules we are about to enable largely depend on Sysmon logs as that is what most of them were written for.
 
+  ![Console](Screenshots/Sysmon_logs_Config.png)
+    Sysmon Config
+
+  
 ##  Enable Sigma EDR Ruleset
 - Finally, let’s turn on the open source Sigma ruleset to assist our detection efforts.
 
+![Console](Screenshots/Sigma_Ruleset.png)
+  Sigma Ruleset
+
 ## Start the Sliver Client
 -  In your Linux terminal, enter a root shell
+-  Verify the server is running
+-  Launch the Sliver client
+-  Start the HTTP listener
 
-## Generate our C2 Implant
+-  
+-
+-   ## Gnerate our C2 Implant
 - Generate C2 implant and drop it into a directory we'll later be able to access from the Windows VM.
 
 ## Drop our C2 implant on Windows and launch it
@@ -119,13 +131,13 @@ LimaCharlie is a powerful “SecOps Cloud Platform”. It not only comes with a 
   ![Console](Screenshots/Hash.png)
   ![Console](Screenshots/Implants.png)
   ![Console](Screenshots/LSASS_Detection.png)
-  ![Console](Screenshots/LimaCharlie_add_Sensor.png)
+
   ![Console](Screenshots/Network.png)
   ![Console](Screenshots/Network_Connections.png)
   ![Console](Screenshots/Process_Tree.png)
   ![Console](Screenshots/Processes.png)
-  ![Console](Screenshots/Sigma_Ruleset.png)
-  ![Console](Screenshots/Sysmon_logs_Config.png)
+  
+  
   ![Console](Screenshots/VSS_Deletion_rules.png)
   ![Console](Screenshots/Virus_Total.png)
   ![Console](Screenshots/Whomai.png)
