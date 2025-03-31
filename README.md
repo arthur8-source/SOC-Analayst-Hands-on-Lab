@@ -88,65 +88,82 @@ To simulate real-world attacks, I set up a Command and Control (C2) server using
 
 ####  Executing the Payload
 I executed the generated payload on the Windows VM, which initiated a connection back to the C2 server. This setup allowed me to interact with the compromised system through the C2 framework, mimicking the actions of a real attacker.
-
+   ![Console](Screenshots/Screenshot_2025_1.png)  
+    Start Sliver
+    
    ![Console](Screenshots/Generate_C2_Implants.png)
+     Generate C2
 
-## Drop our C2 implant on Windows and launch it
-- a web server on the Linux VM which is serving up the location we saved our C2 implant in the previous step.
-- Click on your implant name to download it to the Windows VM
+   ![Console](Screenshots/Screenshot_2025_2.png)
+    Download Implant on WIndows VM
 
+   ![Console](Screenshots/Screenshot_2025_3.png)
+    Sessions
 
-## Open your new C2 Session
+   ![Console](Screenshots/Info_1.png)   
+    Info
 
-- In Edge, browse to http://<linux_vm_ip>:8080
+   ![Console](Screenshots/Process_Tree.png)
+    Process Tree
 
-- This is a web server on the Linux VM which is serving up the location we saved our C2 implant in the previous step.
-- Click on your implant name to download it to the Windows VM
-- Download your Sliver C2 implant from the Linux VM web server.
-
-## Open your new C2 Session
- Switch back to Linux VM Sliver Client
-- Within a few moments, your C2 implant should callback to your Sliver server
-- Your new C2 session has arrived
-- Verify your session in Sliver, taking note of the Session ID
--You are now interacting directly with the C2 session on the Windows VM. Let’s run a few basic commands to get our bearing on the victim host.
+   ![Console](Screenshots/Screenshot_2025_4.png)
+    Process Tree 2
 
 
 ## Exploring EDR Telemetry
-- Let’s hop into the LimaCharlie web UI and check out some basic features.
-- Click your active Windows sensor 
-
+- Using the telemetry data from LimaCharlie’s EDR platform, I monitored the activities performed through the C2 connection. This included observing process trees, network connections, and other system behaviors that indicated a compromise.
+ 
 - One of the easiest ways to spot unusual processes is to simply look for ones that are NOT signed
 
 - My C2 implant shows as not signed, and is also active on the network.
 
+  ![Console](Screenshots/Processes_1.png)
+   Processes
 
+  ![Console](Screenshots/Network_1.png)
+   Network
+
+  ![Console](Screenshots/File_System.png)
+   File System
+
+ ![Console](Screenshots/Hash_1.png)
+   Hash
+
+  ![Console](Screenshots/Virus_Total.png)
+   Virus Total
+
+  
+
+- Simulating adversarial actions provided me with vital insights into attacker tactics, methods, and procedures (TTPs), allowing me to better recognize and respond to real-world threats.
+  
+  
   ![Console](Screenshots/Console.png)
   ![Console](Screenshots/Detecting_vss.png)
   ![Console](Screenshots/Detections.png)
   ![Console](Screenshots/Shell_1.png)
   ![Console](Screenshots/Sigma_Ruleset.png)
   ![Console](Screenshots/Yara_silver.png)
-  ![Console](Screenshots/File_System.png)
+  
   ![Console](Screenshots/Getsystem.png)
-  ![Console](Screenshots/Hash_1.png)
+ 
   ![Console](Screenshots/Implants_1.png)
   ![Console](Screenshots/LSASS_Detection.png)
-  ![Console](Screenshots/Network_1.png)
+ 
   ![Console](Screenshots/Network_connections.png)
-  ![Console](Screenshots/Process_Tree.png)
-  ![Console](Screenshots/Processes_1.png)
+  
+
   ![Console](Screenshots/VSS_Deletion_rules.png)
-  ![Console](Screenshots/Virus_Total.png)
+  
   ![Console](Screenshots/Whomai.png)
   ![Console](Screenshots/YARA_Detections2.png)
   ![Console](Screenshots/YARA_Detection_Memory.png)
   ![Console](Screenshots/sensor_endpoint.png)
-  ![Console](Screenshots/Screenshot_2025_1.png)
-  ![Console](Screenshots/Screenshot_2025_2.png)
-  ![Console](Screenshots/Screenshot_2025_3.png)
-  ![Console](Screenshots/Screenshot_2025_4.png)
+  
+
+  
+  
   ![Console](Screenshots/Screenshot_2025_5.png)
   ![Console](Screenshots/Screenshot_2025_6.png)
   ![Console](Screenshots/Screenshot_2025_7.png) 
+  
   
