@@ -128,18 +128,14 @@ I executed the generated payload on the Windows VM, which initiated a connection
   ![Console](Screenshots/Sigma_Ruleset.png)
   ![Console](Screenshots/Yara.single.png)
   ![Console](Screenshots/File_System.png)
- 
   ![Console](Screenshots/Getsystem.png)
-  ![Console](Screenshots/Hash.png)
-  ![Console](Screenshots/Implants.png)
+  ![Console](Screenshots/Hash_1.png)
+  ![Console](Screenshots/Implants_1.png)
   ![Console](Screenshots/LSASS_Detection.png)
-
-  ![Console](Screenshots/Network.png)
+  ![Console](Screenshots/Network_1.png)
   ![Console](Screenshots/Network_Connections.png)
   ![Console](Screenshots/Process_Tree.png)
-  ![Console](Screenshots/Processes.png)
-  
-  
+  ![Console](Screenshots/Processes_1.png)
   ![Console](Screenshots/VSS_Deletion_rules.png)
   ![Console](Screenshots/Virus_Total.png)
   ![Console](Screenshots/Whomai.png)
