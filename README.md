@@ -105,5 +105,5 @@ LimaCharlie is a powerful “SecOps Cloud Platform”. It not only comes with a 
 - My C2 implant shows as not signed, and is also active on the network.
 
 
-  ![Console](soc_analyst/Console.png)
+  ![Console](Screenshots/Console.png)
 
