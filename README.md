@@ -202,46 +202,31 @@ I wrote custom YARA rules to detect malicious payloads and tested these rules us
 - Executing manual YARA scans on the Windows VM to validate the effectiveness of these rules.
 
 
-
-
-
- ![Console](Screenshots/Whomai.png)
- whomai
-
-
-
-![Console](Screenshots/Getsystem.png)
-
+  ![Console](Screenshots/Screenshot_2025_8.png)
+   Writing YARA rules
   
-  
-  ![Console](Screenshots/Console.png)
-  
-  ![Console](Screenshots/Detections.png)
-  
-  ![Console](Screenshots/Sigma_Ruleset.png)
-  ![Console](Screenshots/Yara_silver.png)
-  
+  ![Console](Screenshots/Screenshot_2025_9.png)  
+   YARA Rules
 
- 
-  ![Console](Screenshots/Implants_1.png)
 
- 
-
-  
-
-  
-  
+##  Automating YARA Scans
+To ensure continuous monitoring, I automated the YARA scanning process for new executable files in the Downloads directory. This setup allowed for real-time detection of potential threats as soon as new files were added.
 
   ![Console](Screenshots/YARA_Detections2.png)
-  ![Console](Screenshots/YARA_Detection_Memory.png)
-  ![Console](Screenshots/sensor_endpoint.png)
+  YARA Detection
   
-  
+  ![Console](Screenshots/YARA_Detection_Memory.png) 
+  YARA Detection in memory
 
-  
-  
-  ![Console](Screenshots/Screenshot_2025_5.png)
-  
-  ![Console](Screenshots/Screenshot_2025_7.png) 
-  
-  
+  ![Console](Screenshots/Console.png) 
+  Console
+
+ ##  Scanning Processes Launched from Downloads
+As part of the automation, I also set up rules to scan any process launched from the Downloads directory. This additional layer of security helps 
+catch any malicious activity that might occur when new executables are run.  
+
+![Console](Screenshots/Detections.png)
+    
+ 
+ 
+ 
