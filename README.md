@@ -202,10 +202,10 @@ I wrote custom YARA rules to detect malicious payloads and tested these rules us
 To ensure continuous monitoring, I automated the YARA scanning process for new executable files in the Downloads directory. This setup allowed for real-time detection of potential threats as soon as new files were added.
 
   ![Console](Screenshots/YARA_Detections2.png)
-  YARA Detection
+  YARA Detection & Response(D&R) rule
   
   ![Console](Screenshots/YARA_Detection_Memory.png) 
-  YARA Detection in memory
+  YARA Detection & Response(D&R) rule in memory
 
   ![Console](Screenshots/Console.png) 
   Console
