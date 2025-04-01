@@ -76,7 +76,7 @@ LimaCharlie is a powerful “SecOps Cloud Platform”. It not only comes with a 
 ##  Enable Sigma EDR Ruleset
 - Finally, let’s turn on the open source Sigma ruleset to assist our detection efforts.
 
-![Console](Screenshots/Sigma_Ruleset.png)
+  ![Console](Screenshots/Sigma_Ruleset.png)
   Sigma Ruleset
 
 # Part 2: Adversary Simulation
@@ -128,15 +128,16 @@ I executed the generated payload on the Windows VM, which initiated a connection
   ![Console](Screenshots/File_System.png)
    File System
 
- ![Console](Screenshots/Hash_1.png)
+  ![Console](Screenshots/Hash_1.png)
    Hash
 
   ![Console](Screenshots/Virus_Total.png)
    Virus Total
-
+   
+- If the file is a common/well-known malware sample, you will know it right away when VirusTotal reports it as such. However, “Item not found” on VT does not mean that this file is innocent, just that it’s never been seen before by VirusTotal. This is because we just generated this payload ourselves, so of course it’s not likely to be seen by VirusTotal before.
   
-
-- Simulating adversarial actions provided me with vital insights into attacker tactics, methods, and procedures (TTPs), allowing me to better recognize and respond to real-world threats.
+- This actually makes a file even more suspicious because nearly everything has been seen by VirusTotal, so your sample may have been custom-crafted/targeted which ups the ante a bit
+#### Simulating adversarial actions provided me with vital insights into attacker tactics, methods, and procedures (TTPs), allowing me to better recognize and respond to real-world threats.
 
 # Part 3: Crafting and Detecting Attacks
 
@@ -148,35 +149,93 @@ To simulate credential theft, I used a tool called `procdump` to dump the `lsass
 ####  Detecting Malicious Activities
 Using LimaCharlie’s EDR, I analyzed the telemetry data generated from the credential dumping activity. This involved identifying key indicators of compromise (IoCs) and creating detection rules to alert on such activities.
 
-![Console](Screenshots/Screenshot_2025_6.png)
-Sensitive Process
+ ![Console](Screenshots/Screenshot_2025_6.png)
+ Sensitive Process
 
-![Console](Screenshots/Detections.png)
+ ![Console](Screenshots/Network_connections.png)
+  Search Malware
+
+  
+ ![Console](Screenshots/LSASS_Detection.png)
+  LSASS Detection rule
+
+ ![Console](Screenshots/Detections.png)
+  Lsass Detection
 
 
- 
+####  By simulating and detecting these attacks, I gained a better understanding of the techniques used by attackers and the methods to effectively detect and respond to such threats. 
+
+#  Part 4: Blocking Attacks
+
+In the fourth part of the series, I focused on creating rules to block specific malicious activities and enhance the security posture of the system.
+
+####  Creating Blocking Rules
+I developed a rule to detect and block the deletion of Volume Shadow Copies, a common technique used by ransomware to prevent recovery. This involved setting up a detection rule in LimaCharlie to monitor for the `vssadmin delete shadows /all` command and automatically terminate the parent process executing this command.
+
+
+####  Testing the Blocking Rules
+To ensure the rule's effectiveness, I executed the `vssadmin delete shadows /all` command from the Sliver C2 session and observed the detection and response action in LimaCharlie. The rule successfully identified and blocked the activity, demonstrating its effectiveness in mitigating ransomware attacks.
+
+ ![Console](Screenshots/Shell_1.png) 
+
+ ![Console](Screenshots/VSS_Deletion_rules.png)
+ Detection and Reponse(D&R) rule
+
+ ![Console](Screenshots/Detecting_vss.png)
+ Detecting Vss
+
+ ![Console](Screenshots/Shadow_copies.png)
+
+ ![Console](Screenshots/Screenshot_2025_7.png)
+
+
+#### By implementing these blocking rules, I significantly improved the system's defenses against ransomware and other destructive attacks.
+
+
+#  Part 5: Advanced Detection with YARA
+
+In the final part of the series, I delved into advanced detection techniques using YARA rules to identify specific malware signatures.
+
+####  Writing and Testing YARA Rules
+I wrote custom YARA rules to detect malicious payloads and tested these rules using LimaCharlie. This involved:
+- Creating YARA rules tailored to detect specific characteristics of malware.
+- Executing manual YARA scans on the Windows VM to validate the effectiveness of these rules.
+
+
+
+
+
+ ![Console](Screenshots/Whomai.png)
+ whomai
+
+
+
+![Console](Screenshots/Getsystem.png)
+
+  
   
   ![Console](Screenshots/Console.png)
-  ![Console](Screenshots/Detecting_vss.png)
+  
   ![Console](Screenshots/Detections.png)
-  ![Console](Screenshots/Shell_1.png)
+  
   ![Console](Screenshots/Sigma_Ruleset.png)
   ![Console](Screenshots/Yara_silver.png)
   
-  ![Console](Screenshots/Getsystem.png)
+
  
   ![Console](Screenshots/Implants_1.png)
-  ![Console](Screenshots/LSASS_Detection.png)
+
  
-  ![Console](Screenshots/Network_connections.png)
+
   
 
-  ![Console](Screenshots/VSS_Deletion_rules.png)
   
-  ![Console](Screenshots/Whomai.png)
+  
+
   ![Console](Screenshots/YARA_Detections2.png)
   ![Console](Screenshots/YARA_Detection_Memory.png)
   ![Console](Screenshots/sensor_endpoint.png)
+  
   
 
   
