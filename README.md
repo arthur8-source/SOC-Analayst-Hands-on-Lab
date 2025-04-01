@@ -24,21 +24,10 @@ Welcome to my Advanced SOC Analyst Lab, a hands-on cybersecurity project designe
 - **Threat Simulation**: Crafted Python scripts to mimic ransomware and APT-style C2 persistence.
 - **EDR Proficiency**: Configured LimaCharlie for real-time monitoring, detection, and response.
 - **Rule Engineering**: Developed multi-condition YAML rules to catch subtle attack indicators while minimizing false positives.
-- **Data Analysis**: Used Python to process JSON telemetry logs and generate an attack timeline graph.
 - **Cloud Infrastructure**: Deployed and secured Ubuntu VMs on AWS Free Tier for attack-and-defend scenarios.
 - **Technical Communication**: Documented setup, execution, and findings in a concise, employer-friendly format.
 
----
 
-| Skill | Tool/Method |
-|-------|-------------|
-| Threat Simulation | Python, Cryptography |
-| EDR Configuration | LimaCharlie |
-| Rule Creation | YAML, Logical Operators |
-| Telemetry Analysis | Matplotlib, JSON Parsing |
-| Cloud Setup | AWS EC2, SSH |
-
----
 
 #  Part 1: Setting Up the Environment
 
