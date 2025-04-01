@@ -225,7 +225,7 @@ To ensure continuous monitoring, I automated the YARA scanning process for new e
 As part of the automation, I also set up rules to scan any process launched from the Downloads directory. This additional layer of security helps 
 catch any malicious activity that might occur when new executables are run.  
 
-![Console](Screenshots/Detections.png)
+  ![Console](Screenshots/YARA_detections.png)
     
  
  
